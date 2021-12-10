@@ -1,0 +1,46 @@
+// Imports
+@import "../helpers/mixins";
+@import "../components/navbutton";
+
+#navbar {
+  min-height: 10vh;
+  //border: 2px solid black;
+  padding: 1rem 5rem;
+  @include flex(row, space-between, center);
+  button {
+    display: none !important;
+    cursor: pointer;
+  }
+  .logo {
+    flex: 0.1;
+  }
+  ul {
+    flex: 0.5;
+    //border: 2px solid red;
+    @include flex(row, space-between, center);
+  }
+}
+
+// Responsive (laptop/tablet/mobile)
+@media (max-width: 992px) {
+  #navbar {
+    padding: 0 2rem;
+    .logo {
+      flex: 0.2;
+    }
+    ul {
+      display: none;
+    }
+    button {
+      display: block !important;
+    }
+  }
+}
+
+@media (max-width: 578px) {
+  #navbar {
+    .logo {
+      flex: 0.3;
+    }
+  }
+}

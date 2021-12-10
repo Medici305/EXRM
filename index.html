@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./sass/style.css">
+    <link rel="shortcut icon" href="./img/budget.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Finance & Investment</title>
 </head>
 <body>
-    <h1>Medici</h1>
+    <div class="container">
+        <!-- 1. Header - Nav Section  -->
+        <nav id='navbar'>
+            <button class="openbtn"><i class="fa fa-bars fa-2x"></i></button>
+            <div class="logo">
+                <avg>
+                    <img src="/img/original.svg" />
+                </svg>
+            </div>
+            <ul>
+                <a href="#">Product & Services</a>
+                <a href="#">About Us</a>
+                <a href="#">Insights</a>
+                <a href="#">Contact</a>
+            </ul>
+        </nav>
+        <!-- 2. Banner with sliding images -->
+        <div class="banner eight columns all slider">
+            <img src="./img/AdobeStock_267982755_Preview.jpeg" class="hide">
+            <img src="./img/AdobeStock_434855030_Preview.jpeg" class="hide">
+            <img src="./img/AdobeStock_312927435_Preview.jpeg" class="hide">
+        </div>
+    </div>
+    <!-- 1.1 Side bar -->
+    <div id="mySidebar" class="sidebar">
+        <button class="closebtn"><i class="fa fa-times fa-2x"></i></button>
+        <ul>
+            <a href="#">Product & Services</a>
+            <a href="#">About Us</a>
+            <a href="#">Insights</a>
+            <a href="#">Contact</a>
+        </ul>
+    </div>
+    <script src="./script.js"></script>
 </body>
 </html>

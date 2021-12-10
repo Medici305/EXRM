@@ -1,0 +1,47 @@
+@import "../helpers/mixins";
+@import "../components/navbutton";
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  @include flex(column, center, center);
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    color: white;
+    margin-top: 1.25rem;
+    cursor: pointer;
+  }
+  ul {
+    @include flex(column, space-between, center);
+    //border: 2px solid white;
+    height: 75%;
+    text-align: center;
+    a {
+      padding: 8px 8px 8px 32px;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+      &:hover {
+        color: #f1f1f1;
+      }
+    }
+  }
+}
+
+// Resposive desktop
+@media (min-width: 992px) {
+  .sidebar {
+    display: none;
+  }
+}
