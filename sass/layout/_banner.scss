@@ -1,36 +1,53 @@
-.banner {
-  border: 2px solid black;
-  min-height: 80vh;
-}
+// Imports
+@import "../helpers/mixins";
 
-// <!-- I added position: absolute; -->
-// <!-- This allow me to use left -->
-.slider img {
-  margin: 15px;
-  height: 95%;
-  width: 95%;
-  border-radius: 5px;
+.description {
+  //border: 2px solid #fff;
+  width: 90%;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  h1 {
+    font-size: 4rem;
+    text-transform: capitalize;
+  }
+  p {
+    width: 75%;
+    margin: 3rem auto;
+    font-size: 0.9rem;
+  }
+  a {
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 1rem 5rem;
+    font-size: 1rem;
+    background: transparent;
+    position: relative;
+    text-transform: capitalize;
+    &:hover {
+      border: 1px solid #64b1cc;
+      background: #64b1cc;
+      transition: all 1s ease-in-out;
+    }
+  }
 }
 
-// <!-- This show the current image with a transition -->
-// <!-- It replace the left attribute to 0 and the opacity to 1 -->
-.slider img.show {
-  opacity: 1;
-  left: 0px;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+@include laptop {
+  .description {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
 }
 
-// <!-- This hide the current image with a transition -->
-// // <!-- It move the image to the left and the opacity to 0 -->
-.slider img.hide {
-  left: -1000px;
-  opacity: 0;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+@include mobile {
+  .description {
+    p {
+      width: 100%;
+    }
+  }
 }

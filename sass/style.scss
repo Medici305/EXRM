@@ -1,7 +1,6 @@
 // Imports
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Praise&display=swap");
 @import "./layout/header";
-@import "./layout/sidebar";
 @import "./layout/banner";
 
 * {
@@ -14,22 +13,7 @@ body {
   font-family: Montserrat;
 }
 
-img,
-svg,
-object {
-  width: 100%;
-  height: auto;
-  //border: 2px solid red;
-}
-
 a {
   text-decoration: none;
-  font-weight: bold;
 }
 
-@media (max-width: 992px) {
-  .container {
-    transition: margin-left 0.5s;
-    //padding: 20px;
-  }
-}

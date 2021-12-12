@@ -2,45 +2,121 @@
 @import "../helpers/mixins";
 @import "../components/navbutton";
 
-#navbar {
-  min-height: 10vh;
-  //border: 2px solid black;
-  padding: 1rem 5rem;
-  @include flex(row, space-between, center);
-  button {
-    display: none !important;
-    cursor: pointer;
-  }
-  .logo {
-    flex: 0.1;
-  }
-  ul {
-    flex: 0.5;
-    //border: 2px solid red;
-    @include flex(row, space-between, center);
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 100vh;
+  width: 100%;
+  animation: slider 16s ease-in-out infinite;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(../../img/four.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  .outer {
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+    // width: 100%;
+    // height: 100vh;
+    // background: rgba(0, 0, 0, 0.5);
+    nav {
+      min-height: 7vh;
+      //background: #fff;
+      padding: 2% 6%;
+      @include flex(row, space-between, center);
+      .fa {
+        display: none;
+        color: #fff;
+        cursor: pointer;
+      }
+      .logo {
+        flex: 0.25;
+        @include flex(row, start, center);
+        //border: 2px solid red;
+        color: #fff;
+        img {
+          max-width: 25%;
+          height: auto;
+          margin-right: 1rem;
+        }
+      }
+      .nav-links {
+        flex: 1;
+        text-align: right;
+        transition: all 1s ease-in-out;
+        //border: 2px solid red;
+        ul {
+          a {
+            display: inline-block;
+            padding: 2rem 1.5rem;
+            color: #fff;
+            &::after {
+              content: "";
+              width: 0%;
+              height: 0.2rem;
+              background: #64b1cc;
+              display: block;
+              margin: auto;
+              transition: all 0.3s ease;
+            }
+            &:hover::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+      // Responsive
+      @include laptop {
+        .logo {
+          flex: 0.3;
+        }
+        .nav-links {
+          position: absolute;
+          background: #64b1cc;
+          height: 100vh;
+          width: 20rem;
+          top: 0;
+          right: -20rem;
+          text-align: left;
+          z-index: 2;
+          ul {
+            padding: 2rem;
+            a {
+              display: block;
+            }
+          }
+        }
+        .fa {
+          display: block;
+          margin: 1rem;
+        }
+      }
+      @include mobile {
+        .logo {
+          flex: 0.5;
+        }
+      }
+    }
   }
 }
 
-// Responsive (laptop/tablet/mobile)
-@media (max-width: 992px) {
-  #navbar {
-    padding: 0 2rem;
-    .logo {
-      flex: 0.2;
-    }
-    ul {
-      display: none;
-    }
-    button {
-      display: block !important;
-    }
-  }
-}
+// @keyframes slider {
+//   0%,
+//   100% {
+//     background-image: url(../../img/four.jpg);
+//   }
+//   25% {
+//     background-image: url(../../img/one.jpg);
+//   }
+//   50% {
+//     background-image: url(../../img/two.jpg);
+//   }
+//   75% {
+//     background-image: url(../../img/three.jpg);
+//   }
+// }
+// #navbar {
 
-@media (max-width: 578px) {
-  #navbar {
-    .logo {
-      flex: 0.3;
-    }
-  }
-}
+// }
