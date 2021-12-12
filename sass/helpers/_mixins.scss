@@ -1,9 +1,36 @@
+// Imports
+@import "./variables";
+
 // Flex
 @mixin flex($direction, $justify, $align) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+}
+
+@mixin card-bg {
+  // @for $i from 1 through 5 {
+  //   &:nth-child(#{$i}) {
+  //     //background: rgb(0, $i * 50, 0);
+  //     background: url(image-#{$i});
+  //   }
+  // }
+  &:nth-child(1) {
+    background-image: url($image-1);
+  }
+  &:nth-child(2) {
+    background-image: url($image-2);
+  }
+  &:nth-child(3) {
+    background-image: url($image-3);
+  }
+  &:nth-child(4) {
+    background-image: url($image-4);
+  }
+  &:nth-child(5) {
+    background-image: url($image-5);
+  }
 }
 
 @mixin laptop {

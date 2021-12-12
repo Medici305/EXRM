@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Praise&display=swap");
 @import "./layout/header";
 @import "./layout/banner";
+@import "./layout/services";
 
 * {
   padding: 0;
@@ -11,9 +12,30 @@
 
 body {
   font-family: Montserrat;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
 }
 
+.visit-button {
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 1rem 5rem;
+  font-size: 1rem;
+  background: transparent;
+  position: relative;
+  text-transform: capitalize;
+  &:hover {
+    border: 1px solid #64b1cc;
+    background: #64b1cc;
+    transition: all 1s ease-in-out;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
