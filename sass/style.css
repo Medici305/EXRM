@@ -73,7 +73,7 @@ button {
     flex: 0.3;
   }
   .header .outer nav .nav-links {
-    position: absolute;
+    position: fixed;
     background: #64b1cc;
     height: 100vh;
     width: 20rem;
