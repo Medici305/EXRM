@@ -1,0 +1,78 @@
+// Imports
+@import "../helpers/mixins";
+
+.footer {
+  min-height: 25vh;
+  margin-top: 5rem;
+  background: black;
+  @include flex(row, space-around, none);
+  .footer-left {
+    flex: 0.7;
+    //border: 2px solid blue;
+    @include flex(row, space-evenly, none);
+    .footer-left-brand {
+      flex: 0.5;
+      text-align: center;
+      h2 {
+        color: #fff;
+      }
+      @include flex(column, space-evenly, none);
+      .socials {
+        @include flex(row, space-evenly, center);
+        color: #fff;
+        i {
+          cursor: pointer;
+          transition: all .4s ease-in-out;
+          &:hover {
+            color: #64b1cc;
+          }
+        }
+      }
+    }
+    .footer-left-menu {
+      flex: 0.5;
+      @include flex(row, space-around, none);
+      ul {
+        @include flex(column, space-evenly, none);
+        //border: 2px solid white;
+        & > a {
+          color: white;
+        }
+      }
+    }
+  }
+  .footer-right {
+    flex: 0.2;
+    //border: 2px solid blue;
+    @include flex(column, space-evenly, center);
+    a {
+      padding: 1rem;
+    }
+    span {
+      color: #fff;
+    }
+  }
+}
+
+// Responsive
+@include laptop {
+  .footer {
+    min-height: 40vh;
+    flex-direction: column;
+  }
+}
+
+@include tablet {
+  .footer {
+    min-height: 60vh;
+    flex-direction: column-reverse;
+
+    .footer-left {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+    .footer-right {
+      flex-direction: column-reverse;
+    }
+  }
+}

@@ -7,6 +7,7 @@
   text-align: center;
   padding-top: 3rem;
   h2 {
+    font-size: 2rem;
     margin-bottom: 2rem;
   }
   .row {
@@ -32,7 +33,7 @@
         float: left;
         cursor: pointer;
         border: 1px solid #64b1cc;
-        color: rgb(91, 91, 91);
+        color: #64b1cc;
         &:hover {
           color: white;
         }

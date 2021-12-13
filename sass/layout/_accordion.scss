@@ -1,0 +1,85 @@
+// Imports
+@import "../helpers/mixins";
+
+.faq {
+  width: 80%;
+  margin: auto;
+  //border: 2px solid black;
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  h2,
+  p {
+    text-align: center;
+  }
+  padding-top: 5rem;
+  .accordion-box {
+    margin: 2rem auto;
+    max-width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: #64b1cc;
+    label,
+    accordion-answer {
+      padding: 0.875rem 1.25rem;
+    }
+    .accordion-input {
+      display: none;
+      &:checked ~ .accordion-answer {
+        opacity: 1;
+        display: block;
+      }
+      &:checked ~ label::after {
+        transform: translateY(-50%) rotate(0.5turn);
+      }
+    }
+    label {
+      display: block;
+      color: #fff;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.1s;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 1.25rem;
+        transform: translateY(-50%);
+        width: 0.75rem;
+        height: 0.4375rem;
+        background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+        background-size: contain;
+        transition: transform 0.4s;
+      }
+      &:hover {
+        background: rgba(0, 0, 0, 0.1);
+      }
+    }
+    .accordion-answer {
+      background: #fff;
+      transition: all 0.4s ease-in-out;
+      opacity: 0;
+      line-height: 1.6;
+      font-size: 0.85em;
+      padding: 2rem;
+      display: none;
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Responsive
+@include tablet {
+  .faq {
+    .accordion-box {
+      .accordion-answer {
+        padding: 1rem 2rem;
+      }
+    }
+  }
+}

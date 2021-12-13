@@ -233,6 +233,82 @@ button {
     margin-bottom: 2rem !important;
   }
 }
+.faq {
+  width: 80%;
+  margin: auto;
+  padding-top: 5rem;
+}
+.faq h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.faq h2,
+.faq p {
+  text-align: center;
+}
+.faq .accordion-box {
+  margin: 2rem auto;
+  max-width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #64b1cc;
+}
+.faq .accordion-box label,
+.faq .accordion-box accordion-answer {
+  padding: 0.875rem 1.25rem;
+}
+.faq .accordion-box .accordion-input {
+  display: none;
+}
+.faq .accordion-box .accordion-input:checked ~ .accordion-answer {
+  opacity: 1;
+  display: block;
+}
+.faq .accordion-box .accordion-input:checked ~ label::after {
+  transform: translateY(-50%) rotate(0.5turn);
+}
+.faq .accordion-box label {
+  display: block;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.1s;
+}
+.faq .accordion-box label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1.25rem;
+  transform: translateY(-50%);
+  width: 0.75rem;
+  height: 0.4375rem;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+  background-size: contain;
+  transition: transform 0.4s;
+}
+.faq .accordion-box label:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.faq .accordion-box .accordion-answer {
+  background: #fff;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  line-height: 1.6;
+  font-size: 0.85em;
+  padding: 2rem;
+  display: none;
+}
+.faq .accordion-box .accordion-answer p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .faq .accordion-box .accordion-answer {
+    padding: 1rem 2rem;
+  }
+}
 .contact-us {
   width: 80%;
   margin: auto;
@@ -240,6 +316,7 @@ button {
   padding-top: 3rem;
 }
 .contact-us h2 {
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 .contact-us .row {
@@ -267,7 +344,7 @@ button {
   float: left;
   cursor: pointer;
   border: 1px solid #64b1cc;
-  color: #5b5b5b;
+  color: #64b1cc;
 }
 .contact-us .row .contact-col button:hover {
   color: white;
@@ -281,6 +358,96 @@ p {
 
   button {
     width: 100%;
+  }
+}
+.footer {
+  min-height: 25vh;
+  margin-top: 5rem;
+  background: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: none;
+}
+.footer .footer-left {
+  flex: 0.7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: none;
+}
+.footer .footer-left .footer-left-brand {
+  flex: 0.5;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: none;
+}
+.footer .footer-left .footer-left-brand h2 {
+  color: #fff;
+}
+.footer .footer-left .footer-left-brand .socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+}
+.footer .footer-left .footer-left-brand .socials i {
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.footer .footer-left .footer-left-brand .socials i:hover {
+  color: #64b1cc;
+}
+.footer .footer-left .footer-left-menu {
+  flex: 0.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: none;
+}
+.footer .footer-left .footer-left-menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: none;
+}
+.footer .footer-left .footer-left-menu ul > a {
+  color: white;
+}
+.footer .footer-right {
+  flex: 0.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer .footer-right a {
+  padding: 1rem;
+}
+.footer .footer-right span {
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .footer {
+    min-height: 40vh;
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    min-height: 60vh;
+    flex-direction: column-reverse;
+  }
+  .footer .footer-left {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .footer .footer-right {
+    flex-direction: column-reverse;
   }
 }
 * {
