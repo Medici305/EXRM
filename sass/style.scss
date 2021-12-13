@@ -3,6 +3,7 @@
 @import "./layout/header";
 @import "./layout/banner";
 @import "./layout/services";
+@import "./layout/contact";
 
 * {
   padding: 0;
@@ -38,4 +39,11 @@ a {
 img {
   width: 100%;
   height: auto;
+}
+
+.row {
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
 }

@@ -154,18 +154,16 @@ button {
 }
 .services p {
   padding: 0 2rem;
+  margin-bottom: 2rem;
 }
 .services .row {
-  margin-top: 5%;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .services .row .services-col {
   flex-basis: 45%;
   background-position: center;
   background-size: cover;
-  min-height: 50vh;
+  min-height: 75vh;
   border-radius: 1rem;
   margin-bottom: 5rem;
   position: relative;
@@ -226,12 +224,63 @@ button {
     display: block !important;
   }
   .row .services-col {
+    min-height: 50vh !important;
     margin-bottom: 2rem !important;
   }
 }
 @media (max-width: 578px) {
   .row .services-col {
     margin-bottom: 2rem !important;
+  }
+}
+.contact-us {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 3rem;
+}
+.contact-us h2 {
+  margin-bottom: 2rem;
+}
+.contact-us .row {
+  justify-content: space-between;
+}
+.contact-us .row .contact-col {
+  flex-basis: 45%;
+}
+.contact-us .row .contact-col .contact-box {
+  text-align: left;
+}
+.contact-us .row .contact-col .contact-box h3 {
+  margin-bottom: 1rem;
+}
+.contact-us .row .contact-col input,
+.contact-us .row .contact-col textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  outline: none;
+  border: 1px solid #ccc;
+  resize: none;
+}
+.contact-us .row .contact-col button {
+  float: left;
+  cursor: pointer;
+  border: 1px solid #64b1cc;
+  color: #5b5b5b;
+}
+.contact-us .row .contact-col button:hover {
+  color: white;
+}
+
+@media (max-width: 992px) {
+  h3,
+p {
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
   }
 }
 * {
@@ -268,6 +317,13 @@ a {
 img {
   width: 100%;
   height: auto;
+}
+
+.row {
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

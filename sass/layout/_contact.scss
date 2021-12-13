@@ -1,0 +1,53 @@
+// Imports
+@import "../helpers/mixins";
+
+.contact-us {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 3rem;
+  h2 {
+    margin-bottom: 2rem;
+  }
+  .row {
+    justify-content: space-between;
+    .contact-col {
+      flex-basis: 45%;
+      .contact-box {
+        text-align: left;
+        h3 {
+          margin-bottom: 1rem;
+        }
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        outline: none;
+        border: 1px solid #ccc;
+        resize: none;
+      }
+      button {
+        float: left;
+        cursor: pointer;
+        border: 1px solid #64b1cc;
+        color: rgb(91, 91, 91);
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@include laptop {
+  h3,
+  p {
+    text-align: center;
+  }
+  button {
+    width: 100%;
+  }
+}

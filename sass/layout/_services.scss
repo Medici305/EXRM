@@ -13,11 +13,9 @@
   }
   p {
     padding: 0 2rem;
+    margin-bottom: 2rem;
   }
   .row {
-    margin-top: 5%;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
 
     .services-col {
@@ -25,7 +23,7 @@
       flex-basis: 45%;
       background-position: center;
       background-size: cover;
-      min-height: 50vh;
+      min-height: 75vh;
       //border: 2px solid blue;
       border-radius: 1rem;
       margin-bottom: 5rem;
@@ -71,6 +69,7 @@
   .row {
     display: block !important;
     .services-col {
+      min-height: 50vh !important;
       margin-bottom: 2rem !important;
     }
   }
