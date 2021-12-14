@@ -15,17 +15,25 @@
     padding: 0 2rem;
     margin-bottom: 2rem;
   }
+  .find-out-more {
+    border: 1px solid #64b1cc;
+    color: #64b1cc;
+    &:hover {
+      color: white;
+    }
+  }
   .row {
+    margin-top: 5rem;
     justify-content: space-evenly;
 
     .services-col {
       @include card-bg;
-      flex-basis: 45%;
+      flex-basis: 22.5%;
       background-position: center;
       background-size: cover;
       min-height: 75vh;
       //border: 2px solid blue;
-      border-radius: 1rem;
+      border-radius: 0.2rem;
       margin-bottom: 5rem;
       position: relative;
       overflow: hidden;
@@ -62,16 +70,19 @@
   }
 }
 
-@include tablet {
-  p {
-    margin-bottom: 2rem;
-  }
+@include laptop {
   .row {
     display: block !important;
     .services-col {
       min-height: 50vh !important;
       margin-bottom: 2rem !important;
     }
+  }
+}
+
+@include tablet {
+  p {
+    margin-bottom: 2rem;
   }
 }
 

@@ -4,12 +4,12 @@
 .description {
   //border: 2px solid #fff;
   width: 90%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 100%;
+  //transform: translateY(20%);
+  margin: auto;
   text-align: center;
   color: #fff;
+  @include flex(column, center, center);
   h1 {
     font-size: 4rem;
     text-transform: capitalize;
@@ -18,6 +18,7 @@
     width: 75%;
     margin: 3rem auto;
     font-size: 0.9rem;
+    line-height: 1.5rem;
   }
 }
 

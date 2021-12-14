@@ -2,38 +2,37 @@
 @import "../helpers/mixins";
 @import "../components/navbutton";
 
+// Banner container
 .header {
   min-height: 100vh;
   width: 100%;
   animation: slider 16s ease-in-out infinite;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-    url(../../img/four.jpg);
   background-position: center;
   background-size: cover;
+  // Layer on top of bg lower opacity darken
   .outer {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
+    @include flex(column, space-between, none);
+    // Navbar
     nav {
-      min-height: 7vh;
-      //background: #fff;
+      height: 20vh;
+      //border: 2px solid white;
       padding: 2% 6%;
       @include flex(row, space-between, center);
-      .fa {
-        display: none;
-        color: #fff;
-        cursor: pointer;
-      }
       .logo {
-        flex: 0.25;
-        @include flex(row, start, center);
+        flex: 0.15;
         //border: 2px solid red;
         color: #fff;
+        h2 {
+          font: {
+            family: "Lobster", cursive;
+            weight: 700;
+          }
+        }
         img {
-          max-width: 25%;
+          max-width: max-content;
           height: auto;
           margin-right: 1rem;
         }
@@ -42,12 +41,14 @@
         flex: 1;
         text-align: right;
         transition: all 1s ease-in-out;
+
         //border: 2px solid red;
         ul {
           a {
             display: inline-block;
-            padding: 2rem 1.5rem;
+            padding: 0 1.5rem;
             color: #fff;
+            font-weight: 700;
             &::after {
               content: "";
               width: 0%;
@@ -63,10 +64,28 @@
           }
         }
       }
-      // Responsive
-      @include laptop {
+      .fa {
+        display: none;
+        color: #fff;
+        cursor: pointer;
+      }
+      input[type="checkbox"] {
+        display: none;
+      }
+      label {
+        //border: 2px solid white;
+      }
+    }
+  }
+}
+
+// Responsive
+@include laptop {
+  .header {
+    .outer {
+      nav {
         .logo {
-          flex: 0.3;
+          flex: .2;
         }
         .nav-links {
           position: fixed;
@@ -74,24 +93,44 @@
           height: 100vh;
           width: 20rem;
           top: 0;
+          box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
           right: -20rem;
           text-align: left;
-          z-index: 2;
+          z-index: 1;
           ul {
             padding: 2rem;
             a {
+              padding: {
+                top: 2rem;
+                bottom: 2rem;
+              }
               display: block;
             }
           }
+        }
+        #toggle:checked ~ .nav-links {
+          right: 0;
+        }
+        #toggle:checked ~ .logo {
+          border: 1px solid white;
         }
         .fa {
           display: block;
           margin: 1rem;
         }
       }
-      @include mobile {
-        .logo {
-          flex: 0.5;
+    }
+  }
+}
+
+@include mobile {
+  .header {
+    .outer {
+      nav {
+        @include mobile {
+          .logo {
+            flex: 0.3;
+          }
         }
       }
     }
@@ -101,15 +140,15 @@
 @keyframes slider {
   0%,
   100% {
-    background-image: url(../../img/four.jpg);
+    background-image: url(../../img/four.webp);
   }
   25% {
-    background-image: url(../../img/one.jpg);
+    background-image: url(../../img/seven.webp);
   }
   50% {
-    background-image: url(../../img/two.jpg);
+    background-image: url(../../img/ten.webp);
   }
   75% {
-    background-image: url(../../img/three.jpg);
+    background-image: url(../../img/nine.webp);
   }
 }

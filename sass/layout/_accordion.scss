@@ -13,7 +13,7 @@
   p {
     text-align: center;
   }
-  padding-top: 5rem;
+  padding-top: 1rem;
   .accordion-box {
     margin: 2rem auto;
     max-width: 100%;
@@ -41,6 +41,10 @@
       font-weight: 500;
       cursor: pointer;
       position: relative;
+      padding: {
+        top: 2rem;
+        bottom: 2rem;
+      }
       transition: background 0.1s;
       &::after {
         content: "";
@@ -76,7 +80,11 @@
 // Responsive
 @include tablet {
   .faq {
+    margin-top: 3rem;
     .accordion-box {
+      label {
+        line-height: 2rem;
+      }
       .accordion-answer {
         padding: 1rem 2rem;
       }

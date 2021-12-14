@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./sass/style.css">
+    <meta name="description" content="This landing page is the ultimate guide into finance and investment bought to you by Exchequer Risk Management. Find out how to set up a succesful account or to make yours even better!"/>
+    <link rel="stylesheet preload" as="style" href="./sass/style.css">
     <link rel="shortcut icon" href="./img/budget.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Finance & Investment</title>
 </head>
 <body>
@@ -16,12 +17,14 @@
         <div class="outer">
             <nav id='navbar'>
                 <a href="#" class="logo">
-                    <img src="./img/wealth.png" alt="wealth logo">
-                    <h2>Exchequer</h2>
+                    <img src="./img/exwm.webp" width='100%' height='100%' />
                 </a>
                 <!-- 1.1.1 Nav bar & sidebar -->
                 <div class="nav-links">
-                    <i class="fa fa-times fa-2x"></i>
+                    <input type="checkbox" id="exit">
+                    <label for="exit" class="closebtn">
+                        <i class="fa fa-times fa-2x"></i>
+                    </label>
                     <ul>
                         <a href="#">Product & Services</a>
                         <a href="#">About Us</a>
@@ -30,11 +33,12 @@
                     </ul>
                 </div>
                 <!-- 1.1.2 Hamburger icon only appear smaller devices -->
-                <i class="fa fa-bars fa-2x"></i>
+                <input type="checkbox" id="toggle">
+                <label for="toggle" class="openbtn"><i class="fa fa-bars fa-2x"></i></label>
             </nav> 
             <!-- 1.2 Text for banner  -->
             <div class="description">
-                <h1>Welcome To Exchequer Risk Management</h1>
+                <h1>Exchequer Wealth Management</h1>
                 <p>
                     We have extensive experience and act on behalf of many UK businesses to
                     find insurance cover suitable to their exacting needs with a wide range
@@ -42,50 +46,55 @@
                     diverse selection of businesses, from sole traders to multi-national 
                     companies.
                 </p>
-                <a href="#" class="visit-button">visit us to know more</a>
+                <a href="https://www.exrm.co.uk/s/" target='_blank' class="visit-button">visit us to know more</a>
             </div>
         </div>
     </section>
 
     <!-- 2. What We Do  -->
     <section class="services">
-        <h2>What We Do</h2>
+        <h2>Invest In A Better Future</h2>
         <p>Invested responsibly, your money can become a powerful force for good to help shape a better planet and society.</p>
-        
+        <a href="https://www.sjp.co.uk/products-and-services/invest-in-a-better-future" target="_blank" class="visit-button find-out-more">Find Out More</a>
+        <!-- 2.1 Cards -->
         <div class="row">
+            <!-- 2.1.1 Investment card  -->
             <div class="services-col">
                 <div class="text-layer">
                     <div class="text-box">
                         <h3>Investments</h3>
                         <p>The right investments can offer real opportunities to grow your wealth and protect it against inflation. We offer a broad range of funds to choose from, along with expert advice to help you build an appropriate portfolio.</p>
-                        <a href="#" class="visit-button">Visit Link</a>
+                        <a href="https://www.navigatewealthgroup.co.uk/navigate-services/navigate-investments/investments-faq" target="_blank" class="visit-button">FAQ</a>
                     </div>
                 </div>
             </div>
+            <!-- 2.1.1 Retirement card  -->
             <div class="services-col">
                 <div class="text-layer">
                     <div class="text-box">
                         <h3>Retirement</h3>
                         <p>Regardless of the life stage you have arrived at, it’s important to receive the right advice on your pension requirements. We can help you make the most of the retirement opportunities available, whether you're an individual or a business.</p>
-                        <a href="#" class="visit-button">Visit Link</a>
+                        <a href="https://www.navigatewealthgroup.co.uk/navigate-services/navigate-pensions/pensions-faq" target="_blank" class="visit-button">FAQ</a>
                     </div>
                 </div>
             </div>
+            <!-- 2.1.1 Family Protection card  -->
             <div class="services-col">
                 <div class="text-layer">
                     <div class="text-box">
                         <h3>Family Protection</h3>
                         <p>We are specialists in providing effective solutions to meet the insurance and protection needs of our clients. Whether you require life cover or advice on Inheritance Tax, Exchequer Wealth Management will offer you the right products and services to suit you and your family.</p>
-                        <a href="#" class="visit-button">Visit Link</a>
+                        <a href="https://www.navigatewealthgroup.co.uk/navigate-services/navigate-family-protections/protection-faq" target="_blank" class="visit-button">FAQ</a>
                     </div>
                 </div>
             </div>
+            <!-- 2.1.1 Estate Planning card  -->
             <div class="services-col">
                 <div class="text-layer">
                     <div class="text-box">
                         <h3>Estate Planning</h3>
                         <p>At Exchequer Wealth Management, we are experienced in providing clear and thorough guidance on estate planning that will help you secure your family’s financial future. We also have access to a range of solutions to ensure that your family and any other beneficiaries are financially provided for after your death.</p>
-                        <a href="#" class="visit-button">Visit Link</a>
+                        <a href="https://www.navigatewealthgroup.co.uk/navigate-services/navigate-estate-planning/estate-planning-faqs" target="_blank" class="visit-button">FAQ</a>
                     </div>
                 </div>
             </div>
@@ -177,7 +186,7 @@
             <div class="footer-left-brand">
                 <a href="#" class="logo">
                     <!-- <img src="./img/wealth.png" alt="wealth logo"> -->
-                    <h2>Exchequer</h2>
+                    <h2>EXWM</h2>
                 </a>
                 <div class="socials">
                     <i class="fa fa-linkedin fa"></i>
@@ -202,6 +211,6 @@
         </div>
     </section>
 
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
 </body>
 </html>

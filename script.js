@@ -1,7 +1,6 @@
 // Variables
-const closeBtn = document.querySelector(".fa-times");
-const openBtn = document.querySelector(".fa-bars");
-
+const closeBtn = document.querySelector(".closebtn");
+const openBtn = document.querySelector(".openbtn");
 // Functions
 const openSidebar = () =>
   (document.querySelector(".nav-links").style.right = "0");
