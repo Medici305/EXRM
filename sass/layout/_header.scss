@@ -18,12 +18,10 @@
     // Navbar
     nav {
       height: 20vh;
-      //border: 2px solid white;
       padding: 2% 6%;
       @include flex(row, space-between, center);
       .logo {
         flex: 0.15;
-        //border: 2px solid red;
         color: #fff;
         h2 {
           font: {
@@ -41,8 +39,6 @@
         flex: 1;
         text-align: right;
         transition: all 1s ease-in-out;
-
-        //border: 2px solid red;
         ul {
           a {
             display: inline-block;
@@ -72,9 +68,6 @@
       input[type="checkbox"] {
         display: none;
       }
-      label {
-        //border: 2px solid white;
-      }
     }
   }
 }
@@ -85,7 +78,7 @@
     .outer {
       nav {
         .logo {
-          flex: .2;
+          flex: 0.2;
         }
         .nav-links {
           position: fixed;

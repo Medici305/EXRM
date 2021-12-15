@@ -8,7 +8,6 @@
   @include flex(row, space-around, none);
   .footer-left {
     flex: 0.7;
-    //border: 2px solid blue;
     @include flex(row, space-evenly, none);
     .footer-left-brand {
       flex: 0.5;
@@ -22,7 +21,7 @@
         color: #fff;
         i {
           cursor: pointer;
-          transition: all .4s ease-in-out;
+          transition: all 0.4s ease-in-out;
           &:hover {
             color: #64b1cc;
           }
@@ -34,7 +33,6 @@
       @include flex(row, space-around, none);
       ul {
         @include flex(column, space-evenly, none);
-        //border: 2px solid white;
         & > a {
           color: white;
         }
@@ -43,7 +41,6 @@
   }
   .footer-right {
     flex: 0.2;
-    //border: 2px solid blue;
     @include flex(column, space-evenly, center);
     a {
       padding: 1rem;

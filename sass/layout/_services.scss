@@ -32,7 +32,6 @@
       background-position: center;
       background-size: cover;
       min-height: 75vh;
-      //border: 2px solid blue;
       border-radius: 0.2rem;
       margin-bottom: 5rem;
       position: relative;
@@ -48,10 +47,8 @@
         .text-box {
           height: 100%;
           @include flex(column, space-evenly, center);
-          //border: 2px solid red;
           position: absolute;
           left: 0;
-          //top: 0;
           transform: translateX(-50%);
           width: 100%;
           opacity: 0;
@@ -89,7 +86,6 @@
 @include mobile {
   .row {
     .services-col {
-      //min-height: 25vh !important;
       margin-bottom: 2rem !important;
     }
   }
